@@ -1,0 +1,21 @@
+<suite name="Suite for Cross Browser Testing" parallel = "tests" thread-count = "2">
+	 <!-- parallel test syntax ,threadcount is instance-->
+<listeners>
+<listener class-name="utilities.ExtentReportUtility" />
+</listeners>
+	<test name="Chrome Testing">
+		<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+			<class name="testcases.LoginTestCases">
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="Edge Testing">
+	<parameter name="browser" value="Edge"></parameter>
+	<classes>
+		<class name="testcases.LoginTestCases"></class>
+	</classes>
+	</test>
+</suite>	
